@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="联系我们 - 黄山旅游网站。在线留言咨询黄山旅游信息，获取专业建议。">
+  <title>联系我们 | 黄山旅游在线咨询</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+    }
+    .contact-info-card {
+      background: var(--white); border-radius: var(--radius-lg);
+      padding: var(--space-xl); box-shadow: var(--shadow-sm);
+      display: flex; align-items: flex-start; gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+      transition: all var(--transition);
+    }
+    .contact-info-card:hover { box-shadow: var(--shadow-md); }
+    .contact-icon {
+      width: 48px; height: 48px; border-radius: var(--radius-full);
+      background: var(--primary-pale); display: flex;
+      align-items: center; justify-content: center;
+      font-size: var(--fs-xl); flex-shrink: 0;
+    }
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><span class="logo-icon">⛰️</span><span>黄山旅游</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于黄山</a></li>
+        <li><a href="spots.html">景点名胜</a></li>
+        <li><a href="culture.html">文化底蕴</a></li>
+        <li><a href="guide.html">旅游攻略</a></li>
+        <li><a href="gallery.html">美景图库</a></li>
+        <li><a href="contact.html" class="active">联系我们</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" aria-label="切换主题">🌙</button>
+        <button class="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>联系我们</h1>
+      <div class="breadcrumb"><a href="index.html">首页</a><span>/</span><span>联系我们</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- 联系信息 -->
+        <div class="reveal">
+          <h2 style="font-family:var(--font-title);font-size:var(--fs-3xl);color:var(--primary-dark);margin-bottom:var(--space-lg);">与我们取得联系</h2>
+          <p style="color:var(--text-light);margin-bottom:var(--space-xl);line-height:1.8;">
+            有任何关于黄山的疑问或建议？欢迎通过以下方式联系我们，我们将在24小时内回复您。
+          </p>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong style="display:block;margin-bottom:4px;">地址</strong>
+              <span style="color:var(--text-light);">安徽省黄山市黄山区汤口镇黄山风景区</span>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">📞</div>
+            <div>
+              <strong style="display:block;margin-bottom:4px;">电话</strong>
+              <span style="color:var(--text-light);">0559-5561111（景区咨询）</span>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">📧</div>
+            <div>
+              <strong style="display:block;margin-bottom:4px;">邮箱</strong>
+              <span style="color:var(--text-light);">info@huangshan-travel.cn</span>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <strong style="display:block;margin-bottom:4px;">开放时间</strong>
+              <span style="color:var(--text-light);">周一至周日 06:30—17:00（索道运营时间）</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 联系表单 -->
+        <div class="reveal">
+          <div style="background:var(--white);border-radius:var(--radius-lg);padding:var(--space-xl);box-shadow:var(--shadow-sm);">
+            <h3 style="font-family:var(--font-title);font-size:var(--fs-2xl);color:var(--primary-dark);margin-bottom:var(--space-lg);">在线留言</h3>
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="contactName">姓名 *</label>
+                <input type="text" id="contactName" class="form-input" placeholder="请输入您的姓名" required minlength="2">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">邮箱 *</label>
+                <input type="email" id="contactEmail" class="form-input" placeholder="请输入您的邮箱地址" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactSubject">主题</label>
+                <select id="contactSubject" class="form-input" style="appearance:auto;">
+                  <option value="">请选择咨询类型</option>
+                  <option value="ticket">门票咨询</option>
+                  <option value="route">路线规划</option>
+                  <option value="hotel">住宿预订</option>
+                  <option value="transport">交通指南</option>
+                  <option value="other">其他问题</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactMessage">留言内容 *</label>
+                <textarea id="contactMessage" class="form-textarea" placeholder="请详细描述您的需求，我们将尽快回复..." required minlength="10"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                📨 发送留言
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><h3>⛰️ 黄山旅游</h3><p>致力于为游客提供最全面、最专业的黄山旅游信息服务。</p></div>
+        <div class="footer-col"><h4>快速导航</h4><a href="about.html">关于黄山</a><a href="spots.html">景点名胜</a><a href="guide.html">旅游攻略</a><a href="gallery.html">美景图库</a></div>
+        <div class="footer-col"><h4>旅游服务</h4><a href="guide.html#transport">交通指南</a><a href="guide.html#ticket">门票信息</a><a href="guide.html#hotel">住宿推荐</a><a href="guide.html#food">美食推荐</a></div>
+        <div class="footer-col"><h4>联系我们</h4><a href="contact.html">在线留言</a><a href="#">官方微博</a><a href="#">微信公众号</a><a href="#">服务热线</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 黄山旅游网 | 网页开发技术课程设计 | 仅供学习参考</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="返回顶部">↑</button>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

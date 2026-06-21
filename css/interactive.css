@@ -1,0 +1,59 @@
+﻿/* ============ 景区交互地图样式 ============ */
+.scenic-map-section {
+  padding: var(--space-3xl) 0;
+  background: var(--bg-alt);
+}
+.scenic-map-wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-lg);
+}
+.scenic-map-svg {
+  border-radius: var(--radius-lg);
+  transition: transform 0.1s ease;
+}
+.map-spot:hover circle:first-of-type {
+  filter: url(#glow);
+}
+.map-route:hover {
+  stroke-width: 3 !important;
+  stroke-dasharray: none !important;
+}
+
+/* ============ 3D 卡片倾斜效果 ============ */
+.tilt-card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.tilt-card-inner {
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}
+
+/* ============ 页面加载进度条 ============ */
+.page-loader {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary), var(--accent), var(--primary-light));
+  transform-origin: left;
+  animation: loaderProgress 1.5s ease-out forwards;
+}
+@keyframes loaderProgress {
+  0% { transform: scaleX(0); }
+  30% { transform: scaleX(0.4); }
+  60% { transform: scaleX(0.8); }
+  90% { transform: scaleX(0.95); }
+  100% { transform: scaleX(1); opacity: 0; }
+}
+
+/* 地图弹窗动画 */
+.map-popup {
+  animation: popIn 0.25s cubic-bezier(.68,-.55,.27,1.55);
+}
+@keyframes popIn {
+  from { transform: translate(-50%,-50%) scale(0.8); opacity: 0; }
+  to { transform: translate(-50%,-50%) scale(1); opacity: 1; }
+}

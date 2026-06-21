@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="探索黄山深厚的文化底蕴：徽州文化、诗词书画、摩崖石刻、茶文化、地方美食等。">
+  <title>文化底蕴 | 黄山诗词书画与徽州文化</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>">
+  <style>
+    .culture-card {
+      background: var(--white); border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: var(--shadow-sm); transition: all var(--transition);
+    }
+    .culture-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .culture-card img { width: 100%; height: 200px; object-fit: cover; }
+    .culture-card-body { padding: var(--space-lg); }
+    .culture-card-body h3 { font-family: var(--font-title); color: var(--primary-dark); margin-bottom: var(--space-sm); }
+    .poem-box {
+      background: var(--white); border-left: 4px solid var(--primary);
+      padding: var(--space-lg) var(--space-xl); border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      font-family: var(--font-title); font-size: var(--fs-lg); line-height: 2;
+      box-shadow: var(--shadow-sm); margin: var(--space-md) 0;
+    }
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+      gap: var(--space-xl);
+    }
+    .food-item {
+      text-align: center; background: var(--white); padding: var(--space-lg);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      transition: all var(--transition);
+    }
+    .food-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .food-item .food-emoji { font-size: 3rem; display: block; margin-bottom: var(--space-sm); }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><span class="logo-icon">⛰️</span><span>黄山旅游</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于黄山</a></li>
+        <li><a href="spots.html">景点名胜</a></li>
+        <li><a href="culture.html" class="active">文化底蕴</a></li>
+        <li><a href="guide.html">旅游攻略</a></li>
+        <li><a href="gallery.html">美景图库</a></li>
+        <li><a href="contact.html">联系我们</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" aria-label="切换主题">🌙</button>
+        <button class="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>文化底蕴</h1>
+      <div class="breadcrumb"><a href="index.html">首页</a><span>/</span><span>文化底蕴</span></div>
+    </div>
+  </section>
+
+  <!-- 诗词文化 -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title reveal">诗词黄山</h2>
+      <p class="section-subtitle reveal">历代文人墨客笔下的千古名山</p>
+      <div class="section-divider reveal"></div>
+      <div style="max-width:800px;margin:0 auto;">
+        <div class="poem-box reveal">
+          <p><strong>《游黄山》</strong> — 徐霞客</p>
+          <p style="font-size:var(--fs-xl);">"薄海内外之名山，无如徽之黄山。<br>登黄山，天下无山，观止矣！"</p>
+        </div>
+        <div class="poem-box reveal" style="border-left-color:var(--accent);">
+          <p><strong>《送温处士归黄山白鹅峰旧居》</strong> — 李白</p>
+          <p style="font-size:var(--fs-lg);">"黄山四千仞，三十二莲峰。<br>丹崖夹石柱，菡萏金芙蓉。"</p>
+        </div>
+        <div class="poem-box reveal">
+          <p><strong>《黄山绝顶题文殊院》</strong> — 魏源</p>
+          <p style="font-size:var(--fs-lg);">"峰奇石奇松更奇，云飞水飞山亦飞。<br>华山忽向江南峙，十丈花开一万围。"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 徽州文化 -->
+  <section class="section" style="background:var(--bg-alt);">
+    <div class="container">
+      <h2 class="section-title reveal">徽州文化</h2>
+      <p class="section-subtitle reveal">黄山脚下的千年文化传承</p>
+      <div class="section-divider reveal"></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-xl);">
+        <div class="culture-card reveal">
+          <img src="https://picsum.photos/seed/huizhou-arch/600/300" alt="徽派建筑">
+          <div class="culture-card-body">
+            <h3>🏠 徽派建筑</h3>
+            <p>粉墙黛瓦，马头墙错落有致，天井院落四水归堂。宏村、西递等古村落是世界文化遗产，被誉为"中国画里的乡村"。</p>
+          </div>
+        </div>
+        <div class="culture-card reveal">
+          <img src="https://picsum.photos/seed/ink-stone/600/300" alt="歙砚">
+          <div class="culture-card-body">
+            <h3>🖌️ 文房四宝</h3>
+            <p>徽墨、歙砚为文房珍品，工艺精湛，历史悠久。徽州自古文风昌盛，书画艺术源远流长。</p>
+          </div>
+        </div>
+        <div class="culture-card reveal">
+          <img src="https://picsum.photos/seed/tea/600/300" alt="黄山毛峰">
+          <div class="culture-card-body">
+            <h3>🍵 茶文化</h3>
+            <p>黄山毛峰、祁门红茶、太平猴魁并称"徽茶三绝"。黄山地区是中国最优质的茶叶产区之一，种茶制茶历史悠久。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 摩崖石刻 -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col reveal">
+        <div>
+          <h2 class="section-title" style="text-align:left;">摩崖石刻</h2>
+          <div class="section-divider" style="margin-left:0;"></div>
+          <p style="line-height:2;">黄山现存历代摩崖石刻280余处，散布于各景区主要游道旁。内容涉及题名、题记、诗词、楹联等多种形式。著名石刻有"大好河山""天下第一奇山""一览众山小"等。这些石刻不仅是书法艺术的瑰宝，更是黄山文化底蕴的重要见证。</p>
+        </div>
+        <img src="https://picsum.photos/seed/calligraphy/600/400" alt="摩崖石刻" class="two-col-img" style="width:100%;">
+      </div>
+    </div>
+  </section>
+
+  <!-- 地方美食 -->
+  <section class="section" style="background:var(--bg-alt);">
+    <div class="container">
+      <h2 class="section-title reveal">徽州美食</h2>
+      <p class="section-subtitle reveal">舌尖上的黄山，品味地道徽菜</p>
+      <div class="section-divider reveal"></div>
+      <div class="food-grid">
+        <div class="food-item reveal">
+          <span class="food-emoji">🐟</span>
+          <h3>臭鳜鱼</h3>
+          <p>徽菜头牌，闻着臭吃着香，肉质鲜嫩</p>
+        </div>
+        <div class="food-item reveal">
+          <span class="food-emoji">🍲</span>
+          <h3>毛豆腐</h3>
+          <p>黄山特色小吃，外酥里嫩，蘸酱更佳</p>
+        </div>
+        <div class="food-item reveal">
+          <span class="food-emoji">🍪</span>
+          <h3>黄山烧饼</h3>
+          <p>酥脆可口，梅干菜馅，传承百年工艺</p>
+        </div>
+        <div class="food-item reveal">
+          <span class="food-emoji">🍗</span>
+          <h3>石耳炖鸡</h3>
+          <p>黄山特产石耳与土鸡炖煮，鲜美滋补</p>
+        </div>
+        <div class="food-item reveal">
+          <span class="food-emoji">🍵</span>
+          <h3>黄山毛峰</h3>
+          <p>中国十大名茶，香气如兰，回味甘甜</p>
+        </div>
+        <div class="food-item reveal">
+          <span class="food-emoji">🥟</span>
+          <h3>徽州裹粽</h3>
+          <p>枕头形粽子，糯米软糯，馅料丰富</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><h3>⛰️ 黄山旅游</h3><p>致力于为游客提供最全面、最专业的黄山旅游信息服务。</p></div>
+        <div class="footer-col"><h4>快速导航</h4><a href="about.html">关于黄山</a><a href="spots.html">景点名胜</a><a href="guide.html">旅游攻略</a><a href="gallery.html">美景图库</a></div>
+        <div class="footer-col"><h4>旅游服务</h4><a href="guide.html#transport">交通指南</a><a href="guide.html#ticket">门票信息</a><a href="guide.html#hotel">住宿推荐</a><a href="guide.html#food">美食推荐</a></div>
+        <div class="footer-col"><h4>联系我们</h4><a href="contact.html">在线留言</a><a href="#">官方微博</a><a href="#">微信公众号</a><a href="#">服务热线</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 黄山旅游网 | 网页开发技术课程设计 | 仅供学习参考</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="返回顶部">↑</button>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="黄山美景图库 - 精选高清黄山风光摄影作品，奇松、怪石、云海、日出、四季景观尽收眼底。">
+  <title>美景图库 | 黄山高清风光摄影</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><span class="logo-icon">⛰️</span><span>黄山旅游</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于黄山</a></li>
+        <li><a href="spots.html">景点名胜</a></li>
+        <li><a href="culture.html">文化底蕴</a></li>
+        <li><a href="guide.html">旅游攻略</a></li>
+        <li><a href="gallery.html" class="active">美景图库</a></li>
+        <li><a href="contact.html">联系我们</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" aria-label="切换主题">🌙</button>
+        <button class="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>美景图库</h1>
+      <div class="breadcrumb"><a href="index.html">首页</a><span>/</span><span>美景图库</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <!-- 过滤按钮 -->
+      <div class="gallery-filter reveal">
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="pine">🌲 奇松</button>
+        <button class="filter-btn" data-filter="rock">🪨 怪石</button>
+        <button class="filter-btn" data-filter="cloud">☁️ 云海</button>
+        <button class="filter-btn" data-filter="sunrise">🌅 日出</button>
+        <button class="filter-btn" data-filter="winter">❄️ 冬雪</button>
+      </div>
+
+      <!-- 画廊网格 -->
+      <div class="gallery-grid">
+        <div class="gallery-item reveal" data-category="pine">
+          <img src="https://picsum.photos/seed/pine1/600/450" alt="迎客松" loading="lazy">
+          <div class="gallery-overlay"><span>迎客松</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="pine">
+          <img src="https://picsum.photos/seed/pine2/600/450" alt="送客松" loading="lazy">
+          <div class="gallery-overlay"><span>送客松</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="rock">
+          <img src="https://picsum.photos/seed/rock1/600/450" alt="飞来石" loading="lazy">
+          <div class="gallery-overlay"><span>飞来石</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="rock">
+          <img src="https://picsum.photos/seed/rock2/600/450" alt="猴子观海" loading="lazy">
+          <div class="gallery-overlay"><span>猴子观海</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="cloud">
+          <img src="https://picsum.photos/seed/cloud1/600/450" alt="云海翻涌" loading="lazy">
+          <div class="gallery-overlay"><span>云海翻涌</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="sunrise">
+          <img src="https://picsum.photos/seed/sunrise1/600/450" alt="光明顶日出" loading="lazy">
+          <div class="gallery-overlay"><span>光明顶日出</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="sunrise">
+          <img src="https://picsum.photos/seed/sunrise2/600/450" alt="晨曦黄山" loading="lazy">
+          <div class="gallery-overlay"><span>晨曦黄山</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="winter">
+          <img src="https://picsum.photos/seed/winter1/600/450" alt="雪后黄山" loading="lazy">
+          <div class="gallery-overlay"><span>雪后黄山</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="winter">
+          <img src="https://picsum.photos/seed/winter2/600/450" alt="雾凇奇观" loading="lazy">
+          <div class="gallery-overlay"><span>雾凇奇观</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="cloud">
+          <img src="https://picsum.photos/seed/cloud2/600/450" alt="西海云烟" loading="lazy">
+          <div class="gallery-overlay"><span>西海云烟</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="rock">
+          <img src="https://picsum.photos/seed/rock3/600/450" alt="仙人指路" loading="lazy">
+          <div class="gallery-overlay"><span>仙人指路</span></div>
+        </div>
+        <div class="gallery-item reveal" data-category="pine">
+          <img src="https://picsum.photos/seed/pine3/600/450" alt="探海松" loading="lazy">
+          <div class="gallery-overlay"><span>探海松</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 灯箱 -->
+  <div class="lightbox">
+    <button class="lightbox-close" aria-label="关闭">&times;</button>
+    <button class="lightbox-prev" aria-label="上一张">&lt;</button>
+    <button class="lightbox-next" aria-label="下一张">&gt;</button>
+    <img class="lightbox-img" src="" alt="">
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><h3>⛰️ 黄山旅游</h3><p>致力于为游客提供最全面、最专业的黄山旅游信息服务。</p></div>
+        <div class="footer-col"><h4>快速导航</h4><a href="about.html">关于黄山</a><a href="spots.html">景点名胜</a><a href="guide.html">旅游攻略</a><a href="gallery.html">美景图库</a></div>
+        <div class="footer-col"><h4>旅游服务</h4><a href="guide.html#transport">交通指南</a><a href="guide.html#ticket">门票信息</a><a href="guide.html#hotel">住宿推荐</a><a href="guide.html#food">美食推荐</a></div>
+        <div class="footer-col"><h4>联系我们</h4><a href="contact.html">在线留言</a><a href="#">官方微博</a><a href="#">微信公众号</a><a href="#">服务热线</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 黄山旅游网 | 网页开发技术课程设计 | 仅供学习参考</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="返回顶部">↑</button>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

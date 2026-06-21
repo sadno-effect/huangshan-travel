@@ -1,0 +1,79 @@
+﻿/* ============ 响应式设计 ============ */
+
+/* 平板 (≤1024px) */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .timeline::before { left: 24px; }
+  .timeline-item,
+  .timeline-item:nth-child(even) { flex-direction: row; }
+  .timeline-dot { left: 24px; }
+  .timeline-content { width: calc(100% - 60px); margin-left: 52px; }
+}
+
+/* 手机 (≤768px) */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 60px;
+    --space-4xl: 4rem;
+    --space-3xl: 3rem;
+  }
+  .hamburger { display: flex; }
+  .nav-links {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0; right: 0;
+    background: var(--bg);
+    flex-direction: column;
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transition);
+  }
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+  .hero { min-height: 90vh; }
+  .hero-title { font-size: 2rem; }
+  .hero-desc { font-size: 1rem; }
+  .carousel-slide img { height: 300px; }
+  .features-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); }
+  .footer-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: var(--fs-3xl); }
+  .parallax-section { background-attachment: scroll; min-height: 300px; }
+  .parallax-content h2 { font-size: var(--fs-2xl); }
+  .stats-grid { grid-template-columns: repeat(2,1fr); }
+  .timeline-content { width: calc(100% - 52px); margin-left: 44px; }
+  .timeline::before { left: 18px; }
+  .timeline-dot { left: 18px; }
+  .lightbox-prev, .lightbox-next { display: none; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .gallery-item { aspect-ratio: 3/2; }
+
+  /* 两列布局 */
+  .two-col { grid-template-columns: 1fr !important; }
+}
+
+/* 大屏优化 (≥1400px) */
+@media (min-width: 1400px) {
+  .container { max-width: 1320px; }
+  .hero-title { font-size: 5rem; }
+}
+
+/* 打印样式 */
+@media print {
+  .navbar, .back-to-top, .footer, .carousel-btn, .carousel-dots { display: none !important; }
+  body { font-size: 12pt; color: #000; }
+  .hero { min-height: auto; padding: 2rem 0; }
+}

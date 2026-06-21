@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="黄山旅游完整攻略：交通指南、门票价格、住宿推荐、美食推荐、最佳路线规划。">
+  <title>旅游攻略 | 黄山吃住行游完整指南</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛰️</text></svg>">
+  <style>
+    .guide-section {
+      background: var(--white); border-radius: var(--radius-lg);
+      padding: var(--space-xl); box-shadow: var(--shadow-sm);
+      margin-bottom: var(--space-xl);
+      transition: all var(--transition);
+    }
+    .guide-section:hover { box-shadow: var(--shadow-md); }
+    .guide-section h3 {
+      font-family: var(--font-title); font-size: var(--fs-2xl);
+      color: var(--primary-dark); margin-bottom: var(--space-md);
+      padding-bottom: var(--space-md); border-bottom: 2px solid var(--primary-pale);
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: var(--space-md);
+    }
+    .info-item {
+      padding: var(--space-md);
+      background: var(--bg-alt);
+      border-radius: var(--radius-md);
+    }
+    .info-item strong { display: block; color: var(--primary); margin-bottom: 2px; }
+
+    /* FAQ */
+    .faq-item {
+      background: var(--white); border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm); margin-bottom: var(--space-md);
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: var(--space-lg); cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-weight: 600; font-size: var(--fs-lg);
+      transition: all var(--transition-fast);
+    }
+    .faq-question:hover { color: var(--primary); }
+    .faq-question::after {
+      content: "+"; font-size: var(--fs-2xl); transition: transform var(--transition);
+    }
+    .faq-item.active .faq-question::after { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height var(--transition), padding var(--transition);
+      padding: 0 var(--space-lg);
+    }
+    .faq-item.active .faq-answer {
+      max-height: 300px; padding: 0 var(--space-lg) var(--space-lg);
+    }
+    .route-card {
+      background: var(--white); border-radius: var(--radius-lg);
+      padding: var(--space-xl); box-shadow: var(--shadow-sm);
+      border-top: 4px solid var(--primary);
+      transition: all var(--transition);
+    }
+    .route-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .route-card.gold { border-top-color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><span class="logo-icon">⛰️</span><span>黄山旅游</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于黄山</a></li>
+        <li><a href="spots.html">景点名胜</a></li>
+        <li><a href="culture.html">文化底蕴</a></li>
+        <li><a href="guide.html" class="active">旅游攻略</a></li>
+        <li><a href="gallery.html">美景图库</a></li>
+        <li><a href="contact.html">联系我们</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" aria-label="切换主题">🌙</button>
+        <button class="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>旅游攻略</h1>
+      <div class="breadcrumb"><a href="index.html">首页</a><span>/</span><span>旅游攻略</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- 天气预报小部件 -->
+      <div class="weather-widget reveal" style="margin-bottom:var(--space-2xl);"></div>
+
+      <!-- 推荐路线 -->
+      <h2 class="section-title reveal">推荐路线</h2>
+      <p class="section-subtitle reveal">根据时间选择最适合的游览路线</p>
+      <div class="section-divider reveal"></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--space-xl);margin-bottom:var(--space-3xl);">
+        <div class="route-card reveal">
+          <h3 style="font-family:var(--font-title);color:var(--primary-dark);margin-bottom:var(--space-md);">一日经典游 ⭐</h3>
+          <p style="line-height:2;color:var(--text-light);">
+            🚡 云谷索道上山 → 始信峰 → 北海景区 → 排云亭 → 飞来石 → 光明顶 → 玉屏索道下山<br>
+            ⏱️ 约6-8小时 | 💪 中等强度
+          </p>
+        </div>
+        <div class="route-card gold reveal">
+          <h3 style="font-family:var(--font-title);color:var(--primary-dark);margin-bottom:var(--space-md);">两日深度游 🔥</h3>
+          <p style="line-height:2;color:var(--text-light);">
+            <strong>Day1:</strong> 云谷索道上 → 始信峰 → 北海 → 西海大峡谷 → 光明顶（宿山顶看日出）<br>
+            <strong>Day2:</strong> 光明顶日出 → 鳌鱼峰 → 莲花峰 → 迎客松 → 玉屏索道下<br>
+            ⏱️ 每天6-7小时 | 💪 推荐方案
+          </p>
+        </div>
+        <div class="route-card reveal">
+          <h3 style="font-family:var(--font-title);color:var(--primary-dark);margin-bottom:var(--space-md);">三日全程游 🏆</h3>
+          <p style="line-height:2;color:var(--text-light);">
+            <strong>Day1:</strong> 前山玉屏索道上 → 迎客松 → 天都峰 → 莲花峰 → 光明顶<br>
+            <strong>Day2:</strong> 西海大峡谷 → 排云亭 → 北海 → 清凉台<br>
+            <strong>Day3:</strong> 始信峰 → 云谷索道下 → 山下温泉<br>
+            ⏱️ 每天5-6小时 | 💪 强度较大
+          </p>
+        </div>
+      </div>
+
+      <!-- 交通指南 -->
+      <div class="guide-section reveal" id="transport">
+        <h3>🚄 交通指南</h3>
+        <div class="info-grid">
+          <div class="info-item"><strong>飞机</strong>黄山屯溪国际机场，距市区7km，有飞往全国主要城市航班。</div>
+          <div class="info-item"><strong>高铁</strong>黄山北站，合福高铁、杭黄高铁交汇，连通全国高铁网。</div>
+          <div class="info-item"><strong>自驾</strong>京台高速G3直通黄山景区，景区有多个大型停车场。</div>
+          <div class="info-item"><strong>班车</strong>屯溪至汤口班车约1小时，汤口为进山的主要集散地。</div>
+        </div>
+      </div>
+
+      <!-- 门票信息 -->
+      <div class="guide-section reveal" id="ticket">
+        <h3>🎫 门票信息</h3>
+        <div class="info-grid">
+          <div class="info-item"><strong>旺季票价(3-11月)</strong>¥190/人</div>
+          <div class="info-item"><strong>淡季票价(12-2月)</strong>¥150/人</div>
+          <div class="info-item"><strong>云谷索道</strong>单程 ¥80/人</div>
+          <div class="info-item"><strong>玉屏索道</strong>单程 ¥90/人</div>
+          <div class="info-item"><strong>太平索道</strong>单程 ¥80/人</div>
+          <div class="info-item"><strong>景区交通</strong>往返 ¥38/人</div>
+        </div>
+        <p style="margin-top:1rem;color:var(--text-muted);font-size:var(--fs-sm);">
+          * 学生凭有效证件可享半价优惠。以上价格仅供参考，以景区公告为准。
+        </p>
+      </div>
+
+      <!-- 住宿推荐 -->
+      <div class="guide-section reveal" id="hotel">
+        <h3>🏨 住宿推荐</h3>
+        <div class="info-grid">
+          <div class="info-item"><strong>山顶住宿</strong>北海宾馆、西海饭店、白云宾馆、光明顶山庄 — 方便看日出，需提前预订</div>
+          <div class="info-item"><strong>山脚住宿</strong>汤口镇各类酒店民宿，价格实惠，选择丰富</div>
+          <div class="info-item"><strong>市区住宿</strong>屯溪区星级酒店，距景区约1小时车程，配套完善</div>
+          <div class="info-item"><strong>特色民宿</strong>宏村、西递等古村落内的徽派民宿，体验原汁原味的徽州生活</div>
+        </div>
+      </div>
+
+      <!-- 美食推荐 -->
+      <div class="guide-section reveal" id="food">
+        <h3>🍽️ 美食推荐</h3>
+        <div class="info-grid">
+          <div class="info-item"><strong>山顶餐饮</strong>各大宾馆均有餐厅，提供自助餐和徽菜，人均¥60-120</div>
+          <div class="info-item"><strong>汤口美食</strong>臭鳜鱼、毛豆腐、黄山双石等徽州名菜，人均¥40-80</div>
+          <div class="info-item"><strong>屯溪老街</strong>黄山烧饼、徽墨酥、五城茶干等伴手礼，适合采购特产</div>
+          <div class="info-item"><strong>温馨提示</strong>山顶物价较高，可自备适量干粮和水。夏季注意补水防晒。</div>
+        </div>
+      </div>
+
+      <!-- 注意事项 -->
+      <div class="guide-section reveal">
+        <h3>⚠️ 注意事项</h3>
+        <div class="info-grid">
+          <div class="info-item"><strong>穿着</strong>登山鞋必备，山顶温差大，建议带一件外套</div>
+          <div class="info-item"><strong>天气</strong>出发前关注天气预报，雨天注意防滑</div>
+          <div class="info-item"><strong>安全</strong>不要翻越护栏，注意落石提示</div>
+          <div class="info-item"><strong>环保</strong>请勿随意丢弃垃圾，保护自然环境</div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <h2 class="section-title reveal" style="margin-top:var(--space-3xl);">常见问题</h2>
+      <p class="section-subtitle reveal">关于游览黄山的常见疑问解答</p>
+      <div class="section-divider reveal"></div>
+      <div style="max-width:800px;margin:0 auto;">
+        <div class="faq-item reveal">
+          <div class="faq-question">黄山适合什么季节去？</div>
+          <div class="faq-answer"><p>黄山四季皆宜：春季(3-5月)赏花观云海，夏季(6-8月)避暑戏水，秋季(9-11月)赏红叶秋高气爽，冬季(12-2月)观雪景雾凇。最推荐春秋两季，天气最舒适。</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">是否需要提前预订门票？</div>
+          <div class="faq-answer"><p>建议提前在黄山旅游官方平台或各大OTA平台预订门票和索道票，特别是节假日和旺季（五一、十一、暑假），现场购票可能排长队。</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">爬黄山需要多少体力？</div>
+          <div class="faq-answer"><p>黄山景区步道以石阶为主，一日游约需步行10-15公里，累计爬升约1000米。一般体力的游客乘坐索道上下山可轻松完成。不推荐全程徒步，非常考验体力。</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">黄山能看到日出吗？</div>
+          <div class="faq-answer"><p>黄山每年有约200天可见日出。最佳观日出地点为光明顶、清凉台、丹霞峰。需住山顶，日出前30-60分钟到达观景点占位。山顶住宿紧俏，务必提前预订。</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-question">黄山周边还有哪些值得去的地方？</div>
+          <div class="faq-answer"><p>宏村、西递（世界文化遗产徽派古村落）、屯溪老街、徽州古城、齐云山、太平湖等，都是非常值得游览的目的地。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><h3>⛰️ 黄山旅游</h3><p>致力于为游客提供最全面、最专业的黄山旅游信息服务。</p></div>
+        <div class="footer-col"><h4>快速导航</h4><a href="about.html">关于黄山</a><a href="spots.html">景点名胜</a><a href="guide.html">旅游攻略</a><a href="gallery.html">美景图库</a></div>
+        <div class="footer-col"><h4>旅游服务</h4><a href="guide.html#transport">交通指南</a><a href="guide.html#ticket">门票信息</a><a href="guide.html#hotel">住宿推荐</a><a href="guide.html#food">美食推荐</a></div>
+        <div class="footer-col"><h4>联系我们</h4><a href="contact.html">在线留言</a><a href="#">官方微博</a><a href="#">微信公众号</a><a href="#">服务热线</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 黄山旅游网 | 网页开发技术课程设计 | 仅供学习参考</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="返回顶部">↑</button>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

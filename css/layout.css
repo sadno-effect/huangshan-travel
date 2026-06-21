@@ -1,0 +1,172 @@
+﻿/* ============ 页脚 ============ */
+.footer {
+  background: var(--primary-dark);
+  color: rgba(255,255,255,.8);
+  padding: var(--space-4xl) 0 var(--space-lg);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+}
+.footer-brand h3 {
+  font-family: var(--font-title);
+  font-size: var(--fs-2xl);
+  color: #fff;
+  margin-bottom: var(--space-md);
+}
+.footer-brand p { font-size: var(--fs-sm); line-height: 1.8; }
+.footer-col h4 {
+  color: #fff;
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-lg);
+}
+.footer-col a {
+  display: block;
+  color: rgba(255,255,255,.6);
+  padding: 4px 0;
+  font-size: var(--fs-sm);
+  transition: color var(--transition-fast);
+}
+.footer-col a:hover { color: var(--accent); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: var(--space-lg);
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: rgba(255,255,255,.5);
+}
+
+/* ============ 返回顶部 ============ */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--primary);
+  color: #fff;
+  font-size: var(--fs-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all var(--transition);
+  z-index: 999;
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background: var(--primary-dark);
+  transform: translateY(-4px);
+}
+
+/* ============ 联系表单 ============ */
+.form-group {
+  margin-bottom: var(--space-lg);
+}
+.form-label {
+  display: block;
+  margin-bottom: var(--space-sm);
+  font-weight: 500;
+  color: var(--text);
+}
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  font: inherit;
+  font-size: var(--fs-base);
+  color: var(--text);
+  background: var(--bg);
+  transition: border-color var(--transition-fast);
+}
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-pale);
+}
+.form-textarea { min-height: 140px; resize: vertical; }
+.form-error { color: var(--danger); font-size: var(--fs-sm); margin-top: 4px; }
+
+/* ============ 页面 Hero 横幅 ============ */
+.page-hero {
+  padding: calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-3xl);
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary-pale), var(--accent-light));
+}
+[data-theme="dark"] .page-hero {
+  background: linear-gradient(135deg, #1b4332, #2d3125);
+}
+.page-hero h1 {
+  font-family: var(--font-title);
+  font-size: var(--fs-5xl);
+  color: var(--primary-dark);
+  margin-bottom: var(--space-sm);
+}
+[data-theme="dark"] .page-hero h1 { color: #d8f3dc; }
+.page-hero .breadcrumb {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  color: var(--text-light);
+  font-size: var(--fs-sm);
+}
+.breadcrumb a { color: var(--primary); }
+
+/* ============ 视差滚动区 ============ */
+.parallax-section {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+.parallax-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+}
+.parallax-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: var(--space-2xl);
+}
+.parallax-content h2 {
+  font-family: var(--font-title);
+  font-size: var(--fs-4xl);
+  margin-bottom: var(--space-md);
+}
+
+/* ============ 滚动渐显动画 ============ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(.25,.46,.45,.94);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
+.reveal-left.visible,
+.reveal-right.visible { transform: translateX(0); }
