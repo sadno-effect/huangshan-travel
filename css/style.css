@@ -13,6 +13,29 @@
 @import "interactive.css";
 
 
+
+/* ============ 导航栏水平布局 ============ */
+.nav-links {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: var(--space-xs);
+}
+.nav-links a {
+  display: block;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  color: var(--text);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary);
+  background: var(--primary-pale);
+}
+
 /* ============ CSS 自定义属性 (变量) ============ */
 :root {
   --primary: #2d6a4f;
