@@ -1,8 +1,17 @@
-﻿/* ============================================================
+/* ============================================================
    黄山旅游景点网站 - 主样式表
    主题: 自然山水 · 中国风
    色彩方案: 松绿 + 云白 + 岩灰 + 金秋点缀
    ============================================================ */
+
+/* 导入模块CSS — 必须在所有规则之前 */
+@import "hero.css";
+@import "components.css";
+@import "media.css";
+@import "layout.css";
+@import "responsive.css";
+@import "interactive.css";
+
 
 /* ============ CSS 自定义属性 (变量) ============ */
 :root {
@@ -169,11 +178,4 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* 导入模块CSS */
-@import "hero.css";
-@import "components.css";
-@import "media.css";
-@import "layout.css";
-@import "responsive.css";
 
-@import "interactive.css";
